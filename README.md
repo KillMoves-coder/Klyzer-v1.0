@@ -1,14 +1,14 @@
-# KRYZEL HUB - Roblox Collection Game Script
+# KLYZER v1.0 - New Script for TSUM
 
-A complete Roblox game system for "Kryzel," a collection-based hub with a red color scheme. Based on the Casual Hub design with enhanced features and modular architecture.
+A complete Roblox game system for "Klyzer," a collection-based hub with a red color scheme. This is a new script built for TSUM with enhanced features and modular architecture.
 
 ---
 
 ## 📦 Included Files
 
-1. **kryzel_hub.lua** - Main UI and game script
-2. **kryzel_collections_module.lua** - Item collection and inventory system
-3. **kryzel_settings_module.lua** - Player settings and configuration system
+1. **klyzer_hub.lua** - Main UI and game script
+2. **klyzer_collections_module.lua** - Item collection and inventory system
+3. **klyzer_settings_module.lua** - Player settings and configuration system
 
 ---
 
@@ -24,35 +24,6 @@ The entire system uses a **red theme** instead of the default cyan/blue:
 
 ---
 
-## 🚀 Installation Guide
-
-### Step 1: Create Roblox Place
-1. Open Roblox Studio
-2. Create a new Baseplate template
-3. In the Explorer panel, select **StarterPlayer > StarterCharacterScripts**
-
-### Step 2: Add Main Script
-1. Insert a new **LocalScript** in **StarterPlayer > StarterPlayerScripts**
-2. Copy the contents of `kryzel_hub.lua` into this script
-3. Save and name it "KryzelHubUI"
-
-### Step 3: Add Collection Module
-1. In **StarterPlayer**, insert a **ModuleScript**
-2. Copy contents of `kryzel_collections_module.lua`
-3. Name it "CollectionsModule"
-
-### Step 4: Add Settings Module
-1. In **StarterPlayer**, insert another **ModuleScript**
-2. Copy contents of `kryzel_settings_module.lua`
-3. Name it "SettingsModule"
-
-### Step 5: Enable DataStore
-1. In **File > Game Settings**
-2. Enable "API Services" and "DataStore"
-3. Publish to Roblox
-
----
-
 ## 📋 Feature Overview
 
 ### Main Hub UI
@@ -61,25 +32,11 @@ The entire system uses a **red theme** instead of the default cyan/blue:
 - **Info Panel**: Display settings and toggles
 - **Grid System**: Scrollable item display with 3x4 cell layout (adjustable)
 
-### Rarity System
-Eight rarity tiers with distinct colors and values:
-
-```
-Common      - Gray (Value: 10)
-Uncommon    - Green (Value: 25)
-Rare        - Blue (Value: 50)
-Epic        - Purple (Value: 100)
-Legendary   - Gold (Value: 250)
-Mythic      - Pink (Value: 500)
-Exclusive   - Red (Value: 1000)
-BlackRare   - Black (Value: 5000)
-```
-
 ### Collections Module
-- **Add/Remove Items**: `Collections.addItemToCollection(player, item)`
-- **Filter by Rarity**: `Collections.getItemsByRarity(player, rarity)`
-- **Sort Collection**: `Collections.sortCollectionByRarity(player)`
-- **Get Statistics**: `Collections.getStatistics(player)`
+- **Add/Remove Items**: Full inventory management
+- **Filter by Rarity**: Organize items by tier
+- **Sort Collection**: Multiple sorting options
+- **Get Statistics**: View collection data
 - **Save/Load Data**: Persistent DataStore integration
 
 ### Settings Module
@@ -91,20 +48,23 @@ BlackRare   - Black (Value: 5000)
 
 ---
 
-## 💻 Usage Examples
+## 🔄 Update History
 
-### Generate Sample Items for Testing
-```lua
-local Collections = require(game.StarterPlayer:WaitForChild("CollectionsModule"))
-local player = game.Players:WaitForChild("YourUsername")
+**Klyzer v1.0 - Initial Release (TSUM)**
+- Main UI system with red theme
+- Collection and inventory system
+- Settings and configuration module
+- Full DataStore integration
+- 8-tier rarity system
+- Display filtering and sorting options
 
--- Generate 50 random items for the player
-Collections.generateRandomItems(player, 50)
+---
 
--- Get collection statistics
-local stats = Collections.getStatistics(player)
-print("Total Items:", stats.totalItems)
-print("Total Value:", stats.totalValue)
+## 📄 License
+
+This is a complete, ready-to-use system for Roblox game development.
+
+**Happy collecting!** 🎉print("Total Value:", stats.totalValue)
 ```
 
 ### Create Custom Item
